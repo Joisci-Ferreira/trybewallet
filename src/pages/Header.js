@@ -52,4 +52,4 @@ const mapStateToProps = (state) => ({
   expenses: state.wallet.expenses,
 });
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, null)(Header);
