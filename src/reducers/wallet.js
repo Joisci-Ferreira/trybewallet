@@ -22,6 +22,13 @@ const wallet = (state = INITIAL_STATE, action) => {
       }],
     };
 
+  case 'DELETE':
+    return {
+      ...state,
+      expenses: state.expenses
+        .filter((expense) => expense.id !== (action.expenses)),
+    };
+
     /* case 'ERROR':
     return {
       ...state,

@@ -3,6 +3,7 @@ const LOGIN = 'LOGIN';
 const CURRENCIES = 'CURRENCIES';
 const EXPENSES = 'EXPENSES';
 const ERROR = 'ERROR';
+const DELETE = 'DELETE';
 
 export const login = (value) => (
   {
@@ -22,6 +23,11 @@ export const addExpenses = (expenses) => ({
 
 export const getAPIerror = (expenses) => ({
   type: ERROR,
+  expenses,
+});
+
+export const deleteExpense = (expenses) => ({
+  type: DELETE,
   expenses,
 });
 
